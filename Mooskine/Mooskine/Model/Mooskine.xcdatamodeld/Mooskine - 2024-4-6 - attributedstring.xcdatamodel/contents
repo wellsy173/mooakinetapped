@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Note" representedClassName="Note" syncable="YES" codeGenerationType="class">
+        <attribute name="attributedText" optional="YES" attributeType="Transformable" defaultValueString="New Note" allowsExternalBinaryDataStorage="YES" customClassName="NSAttributedString"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="notebook" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Notebook" inverseName="notes" inverseEntity="Notebook"/>
+    </entity>
+    <entity name="Notebook" representedClassName="Notebook" syncable="YES" codeGenerationType="class">
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="notebook" inverseEntity="Note"/>
+    </entity>
+</model>
